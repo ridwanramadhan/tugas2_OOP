@@ -68,11 +68,22 @@ class Staff extends Teacher {
 }
 class Headmaster extends Teacher {
 	private String jabatan;
+	Staff s;
+	public void memimpin(Staff s){
+		this.s = s;
+	}
+
 	public void setJabatan(String jabatan) {
 		this.jabatan = jabatan;
 	}
 	public String getJabatan() {
 		return jabatan;
+	}
+
+	public String getStatus(){
+		String hasil = " ";
+		hasil = super.getNama() + " memimpin staff "+ s.getNama();
+		return hasil;
 	}
 }
 class Things {
@@ -147,37 +158,43 @@ class Car extends Vehicle {
 }
 class Main {
 	public static void main(String[] args) {
-		// System.out.println("Hello World");
-		// System.out.println("oi mahdi");
 
+//==========================INISIALISASI=======================================
 		Staff andi = new Staff();
-		// andi.setNama("Andi");
+		andi.setNama("Andi");
 
 		Student budi = new Student();
 		budi.setNama("Budi");
 
 		Headmaster joko = new Headmaster();
+		joko.setNama("Joko");
 
 		Buku rpl = new Buku();
 		rpl.setNama("RPL");
 
 		Slides oop = new Slides();
 
-		Motorcycle m = new Motorcycle();
-		m.setNama("MIO");
+		Motorcycle mio = new Motorcycle();
+		mio.setNama("MIO");
 
 		Car c = new Car();
 
+//==============================PERLAKUAN OBJEK==================================
 		budi.meminjam(rpl);
-		budi.mengendarai(m);
+		budi.mengendarai(mio);
+		joko.memimpin(andi);
+		// andi.mengajar(budi);
 
-		//hasil=========================
+
 		// try{
 		// 	System.out.println(budi.getStatus());
 		// }
 		// catch(Exception e) {
 		// 	System.out.println(e.getMessage());
 		// }
+
+//=======================================OUTPUT==============================
 		System.out.println(budi.getStatus());
+		System.out.println(joko.getStatus());
 	}
 }
