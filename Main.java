@@ -33,8 +33,12 @@ class Student extends Person {
 	}
 	public String getStatus() {
 		String hasil = " ";
-		hasil = p.getNama() + " meminjam "+ b.getNama() + " dan mengendarai " + motor.getNama();
+		hasil = super.getNama() + " meminjam "+ b.getNama() + " dan mengendarai " + motor.getNama();
 		return hasil;
+		// return p.getNama();
+		// return b.getNama();
+		// return motor.getNama();
+		// return Student.getNama();
 	}
 }
 class Teacher extends Person {
@@ -168,6 +172,11 @@ class Main {
 		budi.mengendarai(m);
 
 		//hasil=========================
-		System.out.println(budi.getStatus());
+		try{
+			System.out.println(budi.getStatus());
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 }
