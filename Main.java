@@ -107,7 +107,7 @@ class Buku extends Things {
 		return pengarang;
 	}
 }
-class Slides {
+class Slides extends Things {
 	private int tanggal;
 	public void setTanggal(int tanggal) {
 		this.tanggal = tanggal;
