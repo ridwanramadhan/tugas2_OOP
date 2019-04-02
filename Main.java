@@ -44,6 +44,9 @@ class Student extends Person {
 class Teacher extends Person {
 	private int nip;
 	private int gaji;
+	Motorcycle motor;
+	Car c;
+	Slides ppt;
 	public void setNip(int nip) {
 		this.nip = nip;
 	}
@@ -55,6 +58,18 @@ class Teacher extends Person {
 	}
 	public int getGaji() {
 		return gaji;
+	}
+	public void mengendarai(Motorcycle motor, Car c) {
+		this.motor = motor;
+		this.c = c;
+	}
+	public void menyiapkan(Slides ppt) {
+		this.ppt = ppt;
+	}
+	public String getStatus() {
+		String hasil = " ";
+		hasil = super.getNama()+" mengendarai motor "+motor.getNama()+" atau mengendarai mobil "+c.getNama()+" sambil menyiapkan ppt "+ppt.getNama();
+		return hasil;
 	}
 }
 class Staff extends Teacher {
@@ -183,18 +198,24 @@ class Main {
 		rpl.setNama("RPL");
 
 		Slides oop = new Slides();
+		oop.setNama("Object Oriented Programming");
 
 		Motorcycle mio = new Motorcycle();
 		mio.setNama("MIO");
 
 		Car c = new Car();
+		c.setNama("JAZZ");
+
+		Teacher teach = new Teacher();
+		teach.setNama("Bu Guru");
 
 //==============================PERLAKUAN OBJEK==================================
 		budi.meminjam(rpl);
 		budi.mengendarai(mio);
 		joko.memimpin(andi);
 		andi.mengajar(budi);
-
+		teach.mengendarai(mio, c);
+		teach.menyiapkan(oop);
 
 		// try{
 		// 	System.out.println(budi.getStatus());
@@ -207,5 +228,6 @@ class Main {
 		System.out.println(budi.getStatus());
 		System.out.println(joko.getStatus());
 		System.out.println(andi.getStatus());
+		System.out.println(teach.getStatus());
 	}
 }
