@@ -120,6 +120,34 @@ class Slides {
 		return tanggal;
 	}
 }
+class Vehicle {
+	private String nama;
+	private String warna;
+	private String plat;
+	public Vehicle(String nama, String warna, String plat) {
+		this.nama = nama;
+		this.warna = warna;
+		this.plat = plat;
+	}
+	public void setNama(String nama) {
+		this.nama = nama;
+	}
+	public void setWarna(String warna) {
+		this.warna = warna;
+	}
+	public void setPlat(String plat) {
+		this.plat = plat;
+	}
+	public String getNama() {
+		return nama;
+	}
+	public String getWarna() {
+		return warna;
+	}
+	public String getPlat() {
+		return plat;
+	}
+}
 class Main {
 	public static void main(String[] args) {
 		System.out.println("Hello World");
