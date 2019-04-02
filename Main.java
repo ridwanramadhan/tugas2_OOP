@@ -59,11 +59,21 @@ class Teacher extends Person {
 }
 class Staff extends Teacher {
 	private String matkul;
+	Student std;
+
 	public void setMatkul(String matkul) {
 		this.matkul = matkul;
 	}
 	public String getMatkul() {
 		return matkul;
+	}
+	public void mengajar(Student std){
+		this.std = std;
+	}
+	public String getStatus(){
+		String hasil = " ";
+		hasil = super.getNama() + " mengajar "+ std.getNama();
+		return hasil;
 	}
 }
 class Headmaster extends Teacher {
@@ -183,7 +193,7 @@ class Main {
 		budi.meminjam(rpl);
 		budi.mengendarai(mio);
 		joko.memimpin(andi);
-		// andi.mengajar(budi);
+		andi.mengajar(budi);
 
 
 		// try{
@@ -196,5 +206,6 @@ class Main {
 //=======================================OUTPUT==============================
 		System.out.println(budi.getStatus());
 		System.out.println(joko.getStatus());
+		System.out.println(andi.getStatus());
 	}
 }
