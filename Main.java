@@ -16,7 +16,7 @@ class Person {
 }
 class Student extends Person {
 	private int nis;
-	public Student(int nis) {
+	public void setNis(int nis) {
 		this.nis = nis;
 	}
 	public int getNis() {
@@ -50,7 +50,7 @@ class Staff extends Teacher {
 }
 class Headmaster extends Teacher {
 	private String jabatan;
-	public Headmaster(String jabatan) {
+	public void setJabatan(String jabatan) {
 		this.jabatan = jabatan;
 	}
 	public String getJabatan() {
@@ -125,11 +125,18 @@ class Motorcycle extends Vehicle {
 
 }
 class Car extends Vehicle {
-	
+
 }
 class Main {
 	public static void main(String[] args) {
 		System.out.println("Hello World");
 		System.out.println("oi mahdi");
+		Staff andi = new Staff();
+		Student budi = new Student();
+		Headmaster joko = new Headmaster();
+		Buku rpl = new Buku();
+		Slides oop = new Slides();
+		Motorcycle m = new Motorcycle();
+		Car c = new Car();
 	}
 }
