@@ -1,10 +1,6 @@
 class Person {
 	private String nama;
 	private int umur;
-	public Person(String nama, int umur) {
-		this.nama = nama;
-		this.umur = umur;
-	}
 	public void setNama(String nama) {
 		this.nama = nama;
 	}
@@ -20,9 +16,6 @@ class Person {
 }
 class Student extends Person {
 	private int nis;
-	public Student() {
-
-	}
 	public Student(int nis) {
 		this.nis = nis;
 	}
@@ -33,10 +26,6 @@ class Student extends Person {
 class Teacher extends Person {
 	private int nip;
 	private int gaji;
-	public Teacher(int nip, int gaji) {
-		this.nip = nip;
-		this.gaji = gaji;
-	}
 	public void setNip(int nip) {
 		this.nip = nip;
 	}
@@ -52,7 +41,7 @@ class Teacher extends Person {
 }
 class Staff extends Teacher {
 	private String matkul;
-	public Teacher(String matkul) {
+	public void setMatkul(String matkul) {
 		this.matkul = matkul;
 	}
 	public String getMatkul() {
@@ -61,9 +50,6 @@ class Staff extends Teacher {
 }
 class Headmaster extends Teacher {
 	private String jabatan;
-	public Headmaster() {
-
-	}
 	public Headmaster(String jabatan) {
 		this.jabatan = jabatan;
 	}
@@ -74,14 +60,10 @@ class Headmaster extends Teacher {
 class Things {
 	private String nama;
 	private int jumlah;
-	public Things(String nama, int jumlah) {
-		this.nama = nama;
-		this.jumlah = jumlah;
-	}
 	public void setNama(String nama) {
 		this.nama = nama;
 	}
-	public void setJumlah(String jumlah) {
+	public void setJumlah(int jumlah) {
 		this.jumlah = jumlah;
 	}
 	public String getNama() {
@@ -94,10 +76,6 @@ class Things {
 class Buku {
 	private String penerbit;
 	private String pengarang;
-	public Buku(String penerbit, String pengarang) {
-		this.penerbit = penerbit;
-		this.pengarang = pengarang;
-	}
 	public void setPenerbit(String penerbit) {
 		this.penerbit = penerbit;
 	}
@@ -124,11 +102,6 @@ class Vehicle {
 	private String nama;
 	private String warna;
 	private String plat;
-	public Vehicle(String nama, String warna, String plat) {
-		this.nama = nama;
-		this.warna = warna;
-		this.plat = plat;
-	}
 	public void setNama(String nama) {
 		this.nama = nama;
 	}
