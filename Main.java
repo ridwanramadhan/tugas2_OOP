@@ -121,6 +121,12 @@ class Vehicle {
 		return plat;
 	}
 }
+class Motorcycle extends Vehicle {
+
+}
+class Car extends Vehicle {
+	
+}
 class Main {
 	public static void main(String[] args) {
 		System.out.println("Hello World");
