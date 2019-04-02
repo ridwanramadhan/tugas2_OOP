@@ -187,27 +187,48 @@ class Main {
 //==========================INISIALISASI=======================================
 		Staff andi = new Staff();
 		andi.setNama("Andi");
+		andi.setUmur(30);
+		andi.setNip(12345);
+		andi.setGaji(3000);
+		andi.setMatkul("Struktur Data");
 
 		Student budi = new Student();
 		budi.setNama("Budi");
+		budi.setUmur(20);
+		budi.setNis(46170);
 
 		Headmaster joko = new Headmaster();
 		joko.setNama("Joko");
+		joko.setUmur(35);
+		joko.setNip(54321);
+		joko.setGaji(5000);
 
 		Buku rpl = new Buku();
 		rpl.setNama("RPL");
+		rpl.setJumlah(10);
+		rpl.setPenerbit("McGraw-Hill Education");
+		rpl.setPengarang("Roger S. Pressman");
 
 		Slides oop = new Slides();
 		oop.setNama("Object Oriented Programming");
+		oop.setJumlah(16);
+		oop.setTanggal(30);
 
 		Motorcycle mio = new Motorcycle();
 		mio.setNama("MIO");
+		mio.setWarna("Hitam");
+		mio.setPlat("B 1234 ABC");
 
 		Car c = new Car();
 		c.setNama("JAZZ");
+		c.setWarna("Merah");
+		c.setPlat("B 4321 CBA");
 
 		Teacher teach = new Teacher();
 		teach.setNama("Bu Guru");
+		teach.setUmur(28);
+		teach.setNip(32145);
+		teach.setGaji(4000);
 
 //==============================PERLAKUAN OBJEK==================================
 		budi.meminjam(rpl);
