@@ -16,6 +16,7 @@ class Person {
 }
 class Student extends Person {
 	private int nis;
+	Person p;
 	Buku b;
 	Motorcycle motor;
 	public void setNis(int nis) {
@@ -31,7 +32,9 @@ class Student extends Person {
 		this.motor = motor;
 	}
 	public String getStatus() {
-		return Student.getNama() + " meminjam "+ b.getNama() + " dan mengendarai " +motor.getNama();
+		String hasil = " ";
+		hasil = p.getNama() + " meminjam "+ b.getNama() + " dan mengendarai " + motor.getNama();
+		return hasil;
 	}
 }
 class Teacher extends Person {
@@ -84,7 +87,7 @@ class Things {
 		return jumlah;
 	}
 }
-class Buku {
+class Buku extends Things {
 	private String penerbit;
 	private String pengarang;
 	public void setPenerbit(String penerbit) {
@@ -140,20 +143,31 @@ class Car extends Vehicle {
 }
 class Main {
 	public static void main(String[] args) {
-		System.out.println("Hello World");
-		System.out.println("oi mahdi");
+		// System.out.println("Hello World");
+		// System.out.println("oi mahdi");
+
 		Staff andi = new Staff();
-		andi.setNama("Andi");
+		// andi.setNama("Andi");
+
 		Student budi = new Student();
+		budi.setNama("Budi");
+
 		Headmaster joko = new Headmaster();
+
 		Buku rpl = new Buku();
 		rpl.setNama("RPL");
+
 		Slides oop = new Slides();
+
 		Motorcycle m = new Motorcycle();
 		m.setNama("MIO");
+
 		Car c = new Car();
 
-		andi.meminjam(rpl);
-		andi.mengendarai(m);
+		budi.meminjam(rpl);
+		budi.mengendarai(m);
+
+		//hasil=========================
+		System.out.println(budi.getStatus());
 	}
 }
