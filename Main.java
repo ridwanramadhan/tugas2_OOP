@@ -33,7 +33,7 @@ class Student extends Person {
 	}
 	public String getStatus() {
 		String hasil = " ";
-		hasil = super.getNama() + " meminjam "+ b.getNama() + " dan mengendarai " + motor.getNama();
+		hasil = super.getNama() + " meminjam buku "+ b.getNama() + " dan mengendarai sepeda motor " + motor.getNama();
 		return hasil;
 		// return p.getNama();
 		// return b.getNama();
@@ -172,11 +172,12 @@ class Main {
 		budi.mengendarai(m);
 
 		//hasil=========================
-		try{
-			System.out.println(budi.getStatus());
-		}
-		catch(Exception e) {
-			System.out.println(e.getMessage());
-		}
+		// try{
+		// 	System.out.println(budi.getStatus());
+		// }
+		// catch(Exception e) {
+		// 	System.out.println(e.getMessage());
+		// }
+		System.out.println(budi.getStatus());
 	}
 }
