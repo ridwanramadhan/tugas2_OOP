@@ -16,11 +16,22 @@ class Person {
 }
 class Student extends Person {
 	private int nis;
+	Buku b;
+	Motorcycle motor;
 	public void setNis(int nis) {
 		this.nis = nis;
 	}
 	public int getNis() {
 		return nis;
+	}
+	public void meminjam(Buku b) {
+		this.b = b;
+	} 
+	public void mengendarai(Motorcycle motor) {
+		this.motor = motor;
+	}
+	public String getStatus() {
+		return Student.getNama() + " meminjam "+ b.getNama() + " dan mengendarai " +motor.getNama();
 	}
 }
 class Teacher extends Person {
@@ -132,11 +143,17 @@ class Main {
 		System.out.println("Hello World");
 		System.out.println("oi mahdi");
 		Staff andi = new Staff();
+		andi.setNama("Andi");
 		Student budi = new Student();
 		Headmaster joko = new Headmaster();
 		Buku rpl = new Buku();
+		rpl.setNama("RPL");
 		Slides oop = new Slides();
 		Motorcycle m = new Motorcycle();
+		m.setNama("MIO");
 		Car c = new Car();
+
+		andi.meminjam(rpl);
+		andi.mengendarai(m);
 	}
 }
