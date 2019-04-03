@@ -251,7 +251,7 @@ class Main {
 		// 	System.out.println(e.getMessage());
 		// }
 
-//=======================================OUTPUT==============================
+//=======================================OUTPUT==================================
 		System.out.println(budi.getStatus());
 		System.out.println("");
 		System.out.println(joko.getStatus());
