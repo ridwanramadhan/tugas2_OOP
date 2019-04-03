@@ -33,12 +33,17 @@ class Student extends Person {
 	}
 	public String getStatus() {
 		String hasil = " ";
-		hasil = super.getNama() + " meminjam buku "+ b.getNama() + " dan mengendarai sepeda motor " + motor.getNama();
+		hasil = super.getNama() + " meminjam buku "+ b.getNama() + " dengan pengarang " + b.getPengarang() + " penerbit " + b.getPenerbit() + 
+		"\n dan mengendarai sepeda motor " + motor.getNama() + " berwarna " + motor.getWarna() + " memakai plat " + motor.getPlat();
 		return hasil;
 		// return p.getNama();
 		// return b.getNama();
 		// return motor.getNama();
 		// return Student.getNama();
+		// return b.getPengarang();
+		// return b.getPenerbit();
+		// return motor.getWarna();
+		// return motor.getPlat();
 	}
 }
 class Teacher extends Person {
@@ -68,7 +73,8 @@ class Teacher extends Person {
 	}
 	public String getStatus() {
 		String hasil = " ";
-		hasil = super.getNama()+" mengendarai motor "+motor.getNama()+" atau mengendarai mobil "+c.getNama()+" sambil menyiapkan ppt "+ppt.getNama();
+		hasil = super.getNama()+" mengendarai motor "+motor.getNama()+ " warna "+motor.getWarna()+" atau mengendarai mobil "+c.getNama()+" warna "+c.getWarna()+
+		"\n sambil menyiapkan ppt "+ppt.getNama() + " yang sudah dibuat pada tanggal " +ppt.getTanggal();
 		return hasil;
 	}
 }
@@ -107,7 +113,7 @@ class Headmaster extends Teacher {
 
 	public String getStatus(){
 		String hasil = " ";
-		hasil = super.getNama() + " memimpin staff "+ s.getNama();
+		hasil = super.getNama() + " memimpin staff dengan nama "+ s.getNama() + " yang memiliki NIP " + s.getNip();
 		return hasil;
 	}
 }
@@ -247,8 +253,11 @@ class Main {
 
 //=======================================OUTPUT==============================
 		System.out.println(budi.getStatus());
+		System.out.println("");
 		System.out.println(joko.getStatus());
+		System.out.println("");
 		System.out.println(andi.getStatus());
+		System.out.println("");
 		System.out.println(teach.getStatus());
 	}
 }
