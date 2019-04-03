@@ -93,7 +93,7 @@ class Staff extends Teacher {
 	}
 	public String getStatus(){
 		String hasil = " ";
-		hasil = super.getNama() + " mengajar "+ std.getNama();
+		hasil = super.getNama() + " mengajar "+ std.getNama() + " dengan NIS " + std.getNis();
 		return hasil;
 	}
 }
